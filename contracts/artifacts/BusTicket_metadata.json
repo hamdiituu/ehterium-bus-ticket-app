@@ -1,0 +1,581 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "note",
+								"type": "string"
+							}
+						],
+						"internalType": "struct BusTicket.City",
+						"name": "_city",
+						"type": "tuple"
+					}
+				],
+				"name": "createCity",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "fromCityId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "toCityId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "vehicleId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BusTicket.Transfer",
+						"name": "_transfer",
+						"type": "tuple"
+					}
+				],
+				"name": "createTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "number",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "brand",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "km",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "capacity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct BusTicket.Vehicle",
+						"name": "_vehicle",
+						"type": "tuple"
+					}
+				],
+				"name": "createVehicle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllActiveVehicle",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "number",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "brand",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "km",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "capacity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct BusTicket.Vehicle[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getAllByIdTransferContent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "note",
+										"type": "string"
+									}
+								],
+								"internalType": "struct BusTicket.City",
+								"name": "fromCity",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "note",
+										"type": "string"
+									}
+								],
+								"internalType": "struct BusTicket.City",
+								"name": "toCity",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "number",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "brand",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "km",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "capacity",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "isActive",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct BusTicket.Vehicle",
+								"name": "vehicle",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BusTicket.TransferContent",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllCity",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "note",
+								"type": "string"
+							}
+						],
+						"internalType": "struct BusTicket.City[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllTransferContent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "note",
+										"type": "string"
+									}
+								],
+								"internalType": "struct BusTicket.City",
+								"name": "fromCity",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "note",
+										"type": "string"
+									}
+								],
+								"internalType": "struct BusTicket.City",
+								"name": "toCity",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "number",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "brand",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "km",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "capacity",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "isActive",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct BusTicket.Vehicle",
+								"name": "vehicle",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BusTicket.TransferContent[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllVehicle",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "number",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "brand",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "km",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "capacity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct BusTicket.Vehicle[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getByIdCity",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "note",
+								"type": "string"
+							}
+						],
+						"internalType": "struct BusTicket.City",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getByIdVehicle",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "number",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "brand",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "km",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "capacity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct BusTicket.Vehicle",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "note",
+								"type": "string"
+							}
+						],
+						"internalType": "struct BusTicket.City",
+						"name": "_city",
+						"type": "tuple"
+					}
+				],
+				"name": "updateCity",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "number",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "brand",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "km",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "capacity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct BusTicket.Vehicle",
+						"name": "_vehicle",
+						"type": "tuple"
+					}
+				],
+				"name": "updateVehicle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BusTicket.sol": "BusTicket"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BusTicket.sol": {
+			"keccak256": "0x5f72088f5a14b88651aa5270d098e9fe84a89811b58f3aaa444a424b7d715249",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a2cb4298f3f2bac41132e06645306176bfbe1634c5d43019d5b056660c04b646",
+				"dweb:/ipfs/QmavYWhXPRSe3FyXdazjVph5neEewfdoM1a7LWuLfrCDjX"
+			]
+		}
+	},
+	"version": 1
+}
